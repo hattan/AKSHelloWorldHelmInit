@@ -2,7 +2,7 @@
 
 AKS and Helm introduction presentation.
 
-This repo contains a presentation slide deck and also samples used in the demo.
+This repo contains a presentation [slide deck](slide_deck.pdf) and also samples used in the demo.
 
 ```
 #Pod Information
