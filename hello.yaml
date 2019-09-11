@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: hello2
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hello2
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: hello2
+        image: tutum/hello-world
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello2
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: hello2
+
