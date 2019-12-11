@@ -27,7 +27,7 @@ kubectl exec -it <podname> /bin/sh
 
 #Installing via kubernetes yaml files
 kubectl apply -f azurevote.yml
-kubectl apply - azurevote2.yml
+kubectl apply -f azurevote2.yml
 
 #Helm commands
 helm install . --name azurevote3 --set title=HiHi,value1=vim,value2=emacs
