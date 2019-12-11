@@ -23,11 +23,11 @@ kubectl expose deployment hello --type=LoadBalancer --port=80 --target-port=80
 kubectl scale deployment hello --replicas=3
 
 # Getting access to a POD
-kubectl exec -it <podname> /bin/bash    
+kubectl exec -it <podname> /bin/sh  
 
 #Installing via kubernetes yaml files
 kubectl apply -f azurevote.yml
-kybectl apply - azurevote2.yml
+kubectl apply - azurevote2.yml
 
 #Helm commands
 helm install . --name azurevote3 --set title=HiHi,value1=vim,value2=emacs
