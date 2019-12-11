@@ -32,6 +32,9 @@ kybectl apply - azurevote2.yml
 #Helm commands
 helm install . --name azurevote3 --set title=HiHi,value1=vim,value2=emacs
 helm upgrade  --set title=Wow,value1=Spacex,value2=Nasa azurevote4 .
+
+helm ls
+helm get values --all azurevote3
 ```
 
 
